@@ -31,6 +31,14 @@ brews:
     commit_author:
       name: thebinij
       email: hello@bnijshrestha.com.np
+       
+    description: "Software to convert AD and BS dates"
+
+    # SPDX identifier of your app's license.
+    license: "MIT"
+
+    install: |
+      bin.install "convertdate"
 
 checksum:
   name_template: "{{ .ProjectName }}_checksums.txt"
