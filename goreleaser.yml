@@ -1,0 +1,36 @@
+builds:
+  - binary: convertdate
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
+
+release:
+  # If set to auto, will mark the release as not ready for production
+  prerelease : auto
+
+universal_binaries:
+  # If left as false, your end release might have both several macOS archives:
+  # amd64, arm64 and all. For Mac M1 use true.
+  - replace: true
+
+brews:
+  -
+   name: convertdate
+   homepage: https://github.com/Ulleri-Tech/nepali-date-cli
+   tap:
+    owner: ulleritech
+    name: homebrew-tap-ulleritech
+  commit_author:
+    name: thebinij
+    email: hello@binijshrestha.com.np
+
+checksum:
+   name_template: "{{ .ProjectName }}_checksums.txt"
