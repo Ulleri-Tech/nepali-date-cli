@@ -26,7 +26,7 @@ brews:
     name: convertdate
     homepage: https://github.com/Ulleri-Tech/nepali-date-cli
     tap:
-      owner: ulleritech
+      owner: Ulleri-Tech
       name: homebrew-tap-ulleritech
     commit_author:
       name: thebinij
